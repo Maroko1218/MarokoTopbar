@@ -1,0 +1,42 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_motes_group"
+		texturefile = "gfx/interface/icons/resources/volatile_motes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gases_group"
+		texturefile = "gfx/interface/icons/resources/exotic_gases.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_crystals_group"
+		texturefile = "gfx/interface/icons/resources/rare_crystals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_living_metal_group"
+		texturefile = "gfx/interface/icons/resources/sr_living_metal.dds"
+	}
+
+	spriteType = {
+		name = "GFX_zro_group"
+		texturefile = "gfx/interface/icons/resources/sr_zro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dark_matter_group"
+		texturefile = "gfx/interface/icons/resources/sr_dark_matter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_nanites_group"
+		texturefile = "gfx/interface/icons/resources/nanites.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_minor_artifacts_group"
+		texturefile = "gfx/interface/icons/resources/minor_artifacts.dds"
+	}
+}
