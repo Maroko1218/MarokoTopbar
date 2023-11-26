@@ -107,7 +107,21 @@ tb_minor_artifacts_group = {
 		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
 		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
 	}
-	onclick = relics
+	onclick = discoveries
+}
+
+tb_astral_threads_group = {
+	resources = {
+		astral_threads
+	}
+	localization = {
+		"RESOURCE_GROUP_DEFAULT" = default
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC" = { balance <0 store >= 1000 stored < 10000 }
+		"RESOURCE_GROUP_DEFAULT_NEG" = { balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_MAX" = { max > 0 stored >= max }
+		"RESOURCE_GROUP_DEFAULT_DEC" = { stored >= 1000 stored < 10000 }
+	}
+	onclick = discoveries
 }
 
 tb_physics_research_group = {

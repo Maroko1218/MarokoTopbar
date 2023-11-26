@@ -39,4 +39,9 @@ spriteTypes = {
 		name = "GFX_minor_artifacts_group"
 		texturefile = "gfx/interface/icons/resources/minor_artifacts.dds"
 	}
+
+	spriteType = {
+		name = "GFX_astral_threads_group"
+		texturefile = "gfx/interface/icons/resources/astral_threads.dds"
+	}
 }
