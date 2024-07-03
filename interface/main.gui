@@ -3,12 +3,14 @@ guiTypes={
 		name="pause_bg_animation_speed"
 		position={x=500 y=2000}
 	}
-
-	@tt_offset_y=0
-
 	positionType={
 		name="maingui_bottom_tooltip_offset"
-		position={x=0 y=@tt_offset_y}
+		position={x=0 y=0}
+	}
+
+	positionType={
+		name="main_presence_resolution_switch"
+		position={x=1600 y=-1}
 	}
 
 	containerWindowType={
@@ -38,7 +40,7 @@ guiTypes={
 
 	positionType={
 		name="maingui_lower_topbar_size"
-		position={x=1399 y=0}
+		position={x=1399 y=220}
 	}
 
 	### TOPBAR FOR MUSICPLAYER
@@ -1026,7 +1028,7 @@ guiTypes={
 			buttonType={
 				name="decrease_speed"
 				quadTextureSprite="GFX_topbar_date_minus"
-				position={x= 125 y=7 }
+				position={x= 125 y=7}
 				clicksound=ui_speed_down_time_click
 				oversound=no_sound
 			}
@@ -1089,7 +1091,26 @@ guiTypes={
 	# Main coop presence view
 	##########################
 	containerWindowType={
-		name="gui_presence_main"
+		name="main_gui_presence_loose"
+		size={width=102 height=26}
+		position={x=-400 y=6}
+		orientation=upper_right
+
+		containerWindowType={
+			name="presence_grid_container"
+
+			gridBoxType={
+				name="presence_grid"
+				position={x=-8 y=6}
+				slotSize={width=37 height=23}
+				max_slots_horizontal=1
+				format="LEFT"
+			}
+		}
+	}
+
+	containerWindowType={
+		name="main_gui_presence_compact"
 		size={width=50 height=50}
 		position={x=-53 y=65}
 		orientation=upper_right
@@ -1105,7 +1126,6 @@ guiTypes={
 			gridBoxType={
 				name="presence_grid"
 				position={x=0 y=46}
-				padding={left=0 bottom=0}
 				slotSize={width=23 height=23}
 				max_slots_horizontal=2
 				format="CENTERED_LEFT"
@@ -1207,6 +1227,7 @@ guiTypes={
 			position={x=6 y=39}
 			spriteType="GFX_alliance_vote_status"
 			scale=0.7
+			alwaysTransparent=yes
 		}
 	}
 
@@ -1389,7 +1410,7 @@ guiTypes={
 
 	containerWindowType={
 		name="maingui_left_bar_buttons"
-		size={width=250 height=650}
+		size={width=250 height=690}
 		position={x=-225 y=35}
 		hide_position={x=-225 y=35}
 		show_position={x=-5 y=35}
@@ -1403,7 +1424,7 @@ guiTypes={
 
 		containerWindowType={
 			name="background"
-			size={width=340 height=610}
+			size={width=320 height=610}
 			position={x=5 y=5}
 
 			background={
@@ -1527,14 +1548,25 @@ guiTypes={
 
 	### Coop presence grid entries
 	containerWindowType={
-		name="main_gui_presence_grid_entry"
+		name="main_gui_presence_grid_entry_loose"
 		size={width=29 height=35}
-		position={x=0 y=0}
 
 		buttonType={
 			name="goto_camera"
 			spriteType="GFX_coop_presence_indicator"
-			position={x=0 y=0 }
+			clicksound="confirmation"
+			oversound=no_sound
+			scale=0.85
+		}
+	}
+
+	containerWindowType={
+		name="main_gui_presence_grid_entry_compact"
+		size={width=29 height=35}
+
+		buttonType={
+			name="goto_camera"
+			spriteType="GFX_coop_presence_indicator"
 			clicksound="confirmation"
 			oversound=no_sound
 			scale=0.7
