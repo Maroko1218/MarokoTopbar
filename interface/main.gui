@@ -1139,7 +1139,7 @@ guiTypes={
 			name="message_icon"
 			quadTextureSprite="GFX_test_message_icon"
 			position={x= -13 y=0}
-
+			alwaysTransparent=yes
 			orientation=center
 			centerPosition=yes
 			scale=1.03
@@ -1149,6 +1149,7 @@ guiTypes={
 			name ="message_frame"
 			spriteType="GFX_message_frame"
 			position={x= -18 y=-11}
+			alwaysTransparent=yes
 			frame=1
 		}
 
