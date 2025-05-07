@@ -1157,6 +1157,7 @@ guiTypes={
 			name ="message_circle"
 			spriteType="GFX_message_circle"
 			position={x= -3 y=11}
+			alwaysTransparent=yes
 		}
 
 		iconType={
@@ -1164,6 +1165,7 @@ guiTypes={
 			position={x=6 y=39}
 			spriteType="GFX_alliance_vote_status"
 			scale=0.7
+			alwaysTransparent=yes
 		}
 	}
 
