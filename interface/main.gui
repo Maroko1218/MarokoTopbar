@@ -22,15 +22,12 @@ guiTypes={
 				name="topbar_shield_decoration"
 				spriteType="GFX_topbar_shield_decoration"
 				position={x= 0 y=0}
-				Orientation="UPPER_LEFT"
-				alwaysTransparent=yes
 			}
 
 		buttonType ={
 			name ="button_topbar_government"
 			quadTextureSprite="GFX_empire_flag_64"
 			position={x= -3 y=0}
-			Orientation="UPPER_LEFT"
 			pdx_tooltip="topbar_button_government_instant"
 			pdx_tooltip_delayed="topbar_button_government_delayed"
 			clicksound=interface
@@ -60,7 +57,7 @@ guiTypes={
 			quadTextureSprite="GFX_topbar_background_cutoff"
 			position={x= 0 y=0}
 		}
-			
+
 		buttonType={
 			name="music_controls_toggle"
 			quadTextureSprite="GFX_music_commands_icon"
@@ -88,7 +85,6 @@ guiTypes={
 					background={
 						name="green_vertical_delimiters"
 						spriteType="GFX_green_vertical_delimiters"
-						alwaysTransparent=yes
 					}
 			}
 
@@ -161,7 +157,7 @@ guiTypes={
 			name ="topbar_04"
 			quadTextureSprite="GFX_topbar_bar_04"
 			position={x= -170 y=11}
-			Orientation="UPPER_RIGHT"
+			orientation=upper_right
 			oversound=no_sound
 		}
 
@@ -172,25 +168,10 @@ guiTypes={
 		containerWindowType={
 			name="topbar_static"
 			position={x=65 y=0}
-			size={width=100% height=200}
-			orientation=UPPER_LEFT
-
-			containerWindowType={
-				name="topbar_bar_ff_basic_res"
-				size={width=220 height=25}
-				position={x=0 y=13}
-
-				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
-				}
-			}
-
 			containerWindowType={
 				name="tb_energy_group"
-				size={width=70 height=35}
-				position={x=5 y=0}
+				size={width=70 height=36}
+				position={x=0 y=0}
 
 				background={
 					name="background"
@@ -208,18 +189,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_mineral_group"
-				size={width=70 height=35}
-				position={x=75 y=0}
+				size={width=70 height=36}
+				position={x=70 y=0}
 
 				background={
 					name="background"
@@ -237,18 +217,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_food_group"
 				size={width=70 height=35}
-				position={x=145 y=0}
+				position={x=140 y=0}
 
 				background={
 					name="background"
@@ -266,30 +245,27 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
-				name="topbar_bar_ff_secondary_res"
-				size={width=150 height=25}
-				position={x=215 y=13}
+				name="basic_resources_divider"
+				position={x=210 y=2}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
 				}
 			}
 
 			containerWindowType={
 				name="tb_consumer_goods_group"
-				size={width=70 height=35}
-				position={x=220 y=0}
+				size={width=70 height=36}
+				position={x=210 y=0}
 
 				background={
 					name="background"
@@ -299,7 +275,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_consumer_goods"
-					position={x=25 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -307,18 +283,45 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_biomass_group"
+				size={width=70 height=36}
+				position={x=210 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_biomass"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
 				}
 			}
 
 			containerWindowType={
 				name="tb_alloys_group"
-				size={width=70 height=35}
-				position={x=290 y=0}
+				size={width=70 height=36}
+				position={x=280 y=0}
 
 				background={
 					name="background"
@@ -328,7 +331,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_alloys"
-					position={x=25 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -336,30 +339,57 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
-				name="topbar_bar_ff_advanced_res"
-				size={width=190 height=25}
-				position={x=360 y=13}
+				name="tb_trade_group"
+				size={width=70 height=36}
+				position={x=350 y=0}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_trade"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="rare_resources_divider"
+				position={x=420 y=2}
+				size={width=8 height=75%}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+
 				}
 			}
 
 			containerWindowType={
 				name="tb_motes_group"
-				size={width=60 height=35}
-				position={x=365 y=0}
+				size={width=70 height=36}
+				position={x=420 y=0}
 
 				background={
 					name="background"
@@ -369,7 +399,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_motes_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -377,18 +407,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_gases_group"
-				size={width=60 height=35}
-				position={x=425 y=0}
+				size={width=70 height=36}
+				position={x=490 y=0}
 
 				background={
 					name="background"
@@ -398,7 +427,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_gases_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -406,18 +435,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_crystals_group"
-				size={width=60 height=35}
-				position={x=485 y=0}
+				size={width=70 height=36}
+				position={x=560 y=0}
 
 				background={
 					name="background"
@@ -427,7 +455,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_crystals_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -435,30 +463,27 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
-			
+
 			containerWindowType={
-				name="topbar_bar_ff_strategic_res"
-				size={width=310 height=25}
-				position={x=545 y=13}
+				name="very_rare_resources_divider"
+				position={x=630 y=2}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
 				}
 			}
 
 			containerWindowType={
 				name="tb_living_metal_group"
-				size={width=60 height=35}
-				position={x=550 y=0}
+				size={width=70 height=36}
+				position={x=630 y=0}
 
 				background={
 					name="background"
@@ -468,7 +493,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_living_metal_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -476,18 +501,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_zro_group"
-				size={width=60 height=35}
-				position={x=610 y=0}
+				size={width=70 height=36}
+				position={x=700 y=0}
 
 				background={
 					name="background"
@@ -497,7 +521,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_zro_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -505,18 +529,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_dark_matter_group"
-				size={width=60 height=35}
-				position={x=670 y=0}
+				size={width=70 height=36}
+				position={x=770 y=0}
 
 				background={
 					name="background"
@@ -526,7 +549,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_dark_matter_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -534,18 +557,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
-			
+
 			containerWindowType={
 				name="tb_nanites_group"
-				size={width=60 height=35}
-				position={x=730 y=0}
+				size={width=70 height=36}
+				position={x=840 y=0}
 
 				background={
 					name="background"
@@ -555,7 +577,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_nanites_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -563,18 +585,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
-			
+
 			containerWindowType={
 				name="tb_minor_artifacts_group"
-				size={width=60 height=35}
-				position={x=790 y=0}
+				size={width=70 height=36}
+				position={x=910 y=0}
 
 				background={
 					name="background"
@@ -584,7 +605,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_minor_artifacts_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -592,30 +613,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
-				}
-			}
-
-			containerWindowType={
-				name="topbar_ff_rifts"
-				size={width=70 height=25}
-				position={x=850 y=13}
-				
-				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_astral_threads_group"
-				size={width=60 height=35}
-				position={x=855 y=0}
+				size={width=70 height=36}
+				position={x=980 y=0}
 
 				background={
 					name="background"
@@ -625,7 +633,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_astral_threads_group"
-					position={x=20 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -633,30 +641,27 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
-				name="topbar_bar_ff_society"
-				size={width=140 height=25}
-				position={x=915 y=13}
+				name="societal_resources_divider"
+				position={x=1050 y=2}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
 				}
 			}
 
 			containerWindowType={
 				name="tb_influence_group"
-				size={width=60 height=35}
-				position={x=922 y=0}
+				size={width=70 height=36}
+				position={x=1050 y=0}
 
 				background={
 					name="background"
@@ -666,7 +671,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_influence"
-					position={x=21 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -674,18 +679,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_unity_group"
-				size={width=70 height=35}
-				position={x=980 y=0}
+				size={width=70 height=36}
+				position={x=1120 y=0}
 
 				background={
 					name="background"
@@ -703,30 +707,27 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=66
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
-				name="topbar_bar_ff_research"
-				size={width=190 height=25}
-				position={x=1050 y=13}
+				name="intangible_resources_divider"
+				position={x=1190 y=2}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
 				}
 			}
 
 			containerWindowType={
 				name="tb_physics_research_group"
-				size={width=60 height=35}
-				position={x=1055 y=0}
+				size={width=70 height=36}
+				position={x=1190 y=0}
 
 				background={
 					name="background"
@@ -736,7 +737,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_physics"
-					position={x=21 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -744,18 +745,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_society_research_group"
-				size={width=60 height=35}
-				position={x=1115 y=0}
+				size={width=70 height=36}
+				position={x=1260 y=0}
 
 				background={
 					name="background"
@@ -765,7 +765,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_society"
-					position={x=21 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -773,18 +773,17 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="tb_engineering_research_group"
-				size={width=60 height=35}
-				position={x=1175 y=0}
+				size={width=70 height=36}
+				position={x=1330 y=0}
 
 				background={
 					name="background"
@@ -794,7 +793,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_resource_engineering"
-					position={x=21 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -802,30 +801,27 @@ guiTypes={
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
-				name="topbar_bar_ff_empire"
-				size={width=200 height=25}
-				position={x=1235 y=13}
+				name="military_resources_divider"
+				position={x=1400 y=2}
 
 				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
 				}
 			}
 
 			containerWindowType={
 				name="empire_size_group"
-				size={width=70 height=35}
-				position={x=1240 y=0}
+				size={width=70 height=36}
+				position={x=1400 y=0}
 
 				background={
 					name="background"
@@ -835,27 +831,24 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_empire_sprawl_icon"
-					position={x=23 y=1}
+					position={x=26 y=2}
 					scale=0.8
 					tooltip_mode_enabled=yes
-					alwaysTransparent=yes
 				}
 
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
 					position={x=0 y=18}
-					maxWidth=66
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
-			
 			containerWindowType={
 				name="leaders_group"
 				size={width=70 height=36}
-				position={x=1305 y=0}
+				position={x=1470 y=0}
 
 				background={
 					name="background"
@@ -865,7 +858,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_envoy_icon"
-					position={x=25 y=3}
+					position={x=26 y=2}
 					scale=0.65
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
@@ -875,59 +868,16 @@ guiTypes={
 					name="amount"
 					font="cg_16b"
 					position={x=0 y=18}
-					maxWidth=66
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
-				}
-			}
-
-			containerWindowType={
-				name="pop_group"
-				size={width=50 height=35}
-				position={x=1375 y=0}
-
-				background={
-					name="background"
-					spriteType="GFX_invisible"
-				}
-
-				iconType={
-					name="icon"
-					spriteType="GFX_pop"
-					position={x=17 y=1}
-					scale=0.7
-					tooltip_mode_enabled=yes
-					alwaysTransparent=yes
-				}
-
-				instantTextBoxType={
-					name="amount"
-					font="cg_16b"
-					position={x=3 y=18}
-					maxWidth=46
-					maxHeight=16
-					format=center
-					alwaysTransparent=yes
-				}
-			}
-
-			containerWindowType={
-				name="topbar_bar_ff_navy"
-				size={width=145 height=25}
-				position={x=1430 y=13}
-
-				background={
-					name="topbar_bar_03"
-					spriteType="GFX_topbar_bar_03"
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="starbase_group"
-				size={width=60 height=35}
-				position={x=1435 y=0}
+				size={width=70 height=36}
+				position={x=1540 y=0}
 
 				background={
 					name="background"
@@ -937,26 +887,24 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_station_icon"
-					position={x=20 y=1}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
-					alwaysTransparent=yes
 				}
 
 				instantTextBoxType={
 					name="amount"
 					font="cg_16b"
-					position={x=2 y=18}
-					maxWidth=56
+					position={x=0 y=18}
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 
 			containerWindowType={
 				name="navy_group"
-				size={width=80 height=35}
-				position={x=1492 y=0}
+				size={width=70 height=36}
+				position={x=1610 y=0}
 
 				background={
 					name="background"
@@ -966,7 +914,7 @@ guiTypes={
 				iconType={
 					name="icon"
 					spriteType="GFX_fleet_size_icon"
-					position={x=28 y=2}
+					position={x=26 y=2}
 					tooltip_mode_enabled=yes
 					alwaysTransparent=yes
 				}
@@ -975,10 +923,9 @@ guiTypes={
 					name="amount"
 					font="cg_16b"
 					position={x=0 y=18}
-					maxWidth=76
+					maxWidth=70
 					maxHeight=16
 					format=center
-					alwaysTransparent=yes
 				}
 			}
 		}
@@ -990,7 +937,7 @@ guiTypes={
 			name="time_window"
 			position={x= -150 y=0}
 			size={width=200 height=200}
-			Orientation=upper_right
+			orientation=upper_right
 
 			buttonType ={
 				name ="pause_bg"
@@ -1009,13 +956,11 @@ guiTypes={
 				name ="pause_glow"
 				spriteType="GFX_topbar_pause_glow"
 				position={x= -76 y=-23}
-				alwaystransparent=yes
 			}
 
 			containerWindowType={
 				name="hitbox"
 				position={x=-20 y=0}
-				orientation=upper_left
 				size={width=120 height=35}
 
 				background={
@@ -1048,7 +993,6 @@ guiTypes={
 				maxWidth=100
 				maxHeight=16
 				text="0000.00.00"
-				alwaystransparent=yes
 			}
 
 			buttonType={
@@ -1072,19 +1016,6 @@ guiTypes={
 			}
 		}
 
-		instantTextBoxType={
-			name="debug_version"
-			font="cg_16b"
-			position={x= -204 y= -52}
-			maxHeight=16
-			maxWidth=200
-			fixedsize=yes
-			alwaysTransparent=yes
-			text="Build: 12332"
-			text_color_code="H"
-			format=right
-			Orientation="LOWER_RIGHT"
-		}
 	}
 
 	##########################
@@ -1147,17 +1078,15 @@ guiTypes={
 			spriteType="GFX_resource_consumer_goods"
 			position={x=2 y=0}
 			tooltip_mode_enabled=yes
-			alwaysTransparent=yes
 		}
 
 		instantTextBoxType={
 			name="amount"
 			font="cg_16b"
 			position={x=23 y=0}
-			maxWidth=80
+			maxWidth=70
 			maxHeight=16
 			text="0 / 0"
-			alwaysTransparent=yes
 		}
 	}
 
@@ -1169,7 +1098,7 @@ guiTypes={
 		background={
 			name="bg"
 			quadTextureSprite="GFX_tile_outliner_bg"
-			position={x= 0 y=0 }
+			position={x= 0 y=0}
 		}
 
 		instantTextBoxType={
@@ -1179,7 +1108,6 @@ guiTypes={
 			maxHeight=16
 			maxWidth=249
 			fixedsize=yes
-			alwaysTransparent=yes
 			text="ORDERS"
 			text_color_code="H"
 		}
@@ -1201,17 +1129,26 @@ guiTypes={
 
 		buttonType={
 			name="message_icon_button"
-			quadTextureSprite="GFX_test_message_icon"
-			position={x= -2 y=12 }
+			quadTextureSprite="GFX_message_background"
+			position={x= -2 y=12}
 			clicksound="confirmation"
 			oversound=no_sound
+		}
+
+		iconType={
+			name="message_icon"
+			quadTextureSprite="GFX_test_message_icon"
+			position={x= -13 y=0}
+
+			orientation=center
+			centerPosition=yes
+			scale=1.03
 		}
 
 		iconType={
 			name ="message_frame"
 			spriteType="GFX_message_frame"
 			position={x= -18 y=-11}
-			alwaysTransparent=yes
 			frame=1
 		}
 
@@ -1219,7 +1156,6 @@ guiTypes={
 			name ="message_circle"
 			spriteType="GFX_message_circle"
 			position={x= -3 y=11}
-			alwaysTransparent=yes
 		}
 
 		iconType={
@@ -1227,7 +1163,6 @@ guiTypes={
 			position={x=6 y=39}
 			spriteType="GFX_alliance_vote_status"
 			scale=0.7
-			alwaysTransparent=yes
 		}
 	}
 
@@ -1240,7 +1175,7 @@ guiTypes={
 		buttonType={
 			name="background"
 			quadTextureSprite="GFX_event_button_452"
-			position={x= -25 y=0 }
+			position={x= -25 y=0}
 			clicksound=confirmation
 		}
 
@@ -1251,7 +1186,6 @@ guiTypes={
 			maxHeight=16
 			maxWidth=350
 			fixedsize=yes
-			alwaysTransparent=yes
 		}
 	}
 
@@ -1275,7 +1209,7 @@ guiTypes={
 				name="background"
 				quadTextureSprite="GFX_ship_army_outliner"
 				size={x=300 y=50}
-				position={x=0 y=0 }
+				position={x=0 y=0}
 			}
 
 			instantTextBoxType={
@@ -1286,7 +1220,6 @@ guiTypes={
 				maxHeight=50
 				text="SAVING_GAME"
 				fixedSize=yes
-				alwaysTransparent=yes
 				format=center
 			}
 		}
@@ -1316,7 +1249,6 @@ guiTypes={
 			name="highlight"
 			position={x=-2 y=-10}
 			quadTextureSprite="GFX_navbar_highlight"
-			alwaysTransparent=yes
 		}
 
 		iconType={
@@ -1345,7 +1277,6 @@ guiTypes={
 			maxWidth=140
 			maxHeight=30
 			fixedSize=yes
-			alwaysTransparent=yes
 			format=left
 		}
 
@@ -1356,7 +1287,6 @@ guiTypes={
 			maxWidth=40
 			maxHeight=30
 			fixedSize=yes
-			alwaysTransparent=yes
 			format=right
 		}
 
@@ -1372,7 +1302,7 @@ guiTypes={
 			name="up"
 			quadTextureSprite="GFX_button_up"
 			position={x=5 y=1}
-			orientation="UPPER_RIGHT"
+			orientation=upper_right
 			clicksound=increment_click
 			pdx_tooltip="OUTLINER_OPTIONS_SORT_UP_TOOLTIP"
 		}
@@ -1381,7 +1311,7 @@ guiTypes={
 			name="down"
 			quadTextureSprite="GFX_button_down"
 			position={x=25 y=1}
-			orientation="UPPER_RIGHT"
+			orientation=upper_right
 			clicksound=decrement_click
 			pdx_tooltip="OUTLINER_OPTIONS_SORT_DOWN_TOOLTIP"
 		}
@@ -1390,7 +1320,6 @@ guiTypes={
 			name="gui_presence_outline"
 			position={x=-2 y=-6}
 			spriteType="GFX_coop_presence_left_bar_line"
-			alwaysTransparent=yes
 		}
 
 		containerWindowType={
@@ -1418,7 +1347,6 @@ guiTypes={
 		hide_animation_type=accelerated
 		animation_time=200
 
-		orientation=upper_left
 		moveable=no
 		clipping=no
 
@@ -1437,7 +1365,7 @@ guiTypes={
 			name="settings"
 			quadTextureSprite="GFX_navbar_sort_options_button"
 			position={x=-28 y=20}
-			Orientation="UPPER_RIGHT"
+			orientation=upper_right
 			clicksound=interface
 			oversound=mouse_over
 		}
@@ -1446,7 +1374,7 @@ guiTypes={
 			name="reset_ordering_button"
 			quadTextureSprite="GFX_button_116_24"
 			position={x=-190 y=2}
-			Orientation="UPPER_RIGHT"
+			orientation=upper_right
 			buttonText="RESET_TOPBAR_BUTTON_TEXT"
 			buttonFont="cg_16b"
 			clicksound=interface
@@ -1457,7 +1385,7 @@ guiTypes={
 			name="lock"
 			quadTextureSprite="GFX_navbar_lock_less"
 			position={x=-20 y=-112}
-			Orientation="LOWER_RIGHT"
+			orientation=lower_right
 			clicksound=interface
 			oversound=mouse_over
 		}
@@ -1470,81 +1398,6 @@ guiTypes={
 		}
 	}
 
-	containerWindowType={
-		name="debug_stats"
-		position={x=10 y=720}
-		size={width= 400 height=250}
-
-		moveable=no
-		clipping=yes
-
-		background={
-			name="background"
-			quadTextureSprite="GFX_tile_outliner_bg"
-		}
-
-		instantTextBoxType={
-			name="title"
-			position={x=22 y=5}
-			orientation="UPPER_LEFT"
-			text="Jeff's Debug Stats"
-			font="malgun_goth_24"
-			maxWidth=400
-			maxHeight=100
-			fixedSize=yes
-			alwaysTransparent=yes
-			text_color_code="E"
-		}
-
-		iconType={
-			name="portrait"
-			quadTextureSprite="GFX_portrait_character"
-			position={x=-75 y=40}
-			scale=0.5
-			alwaysTransparent=yes
-		}
-
-		instantTextBoxType={
-			name="avg_frame_time"
-			font="cg_16b"
-			position={x=120 y=60}
-			maxWidth=300
-			maxHeight=16
-			text="aaaaaaaah!"
-		}
-
-		instantTextBoxType={
-			name="avg_micro_tick"
-			font="cg_16b"
-			position={x=120 y=80}
-			maxWidth=300
-			maxHeight=16
-		}
-
-		instantTextBoxType={
-			name="last_daily_tick"
-			font="cg_16b"
-			position={x=120 y=100}
-			maxWidth=300
-			maxHeight=16
-		}
-
-		instantTextBoxType={
-			name="avg_daily_tick"
-			font="cg_16b"
-			position={x=120 y=120}
-			maxWidth=300
-			maxHeight=16
-		}
-
-		instantTextBoxType={
-			name="avg_extra_daily_tick_frames"
-			font="cg_16b"
-			position={x=120 y=140}
-			maxWidth=300
-			maxHeight=16
-		}
-	}
 
 	### Coop presence grid entries
 	containerWindowType={
