@@ -659,7 +659,7 @@ guiTypes={
 			}
 
 			containerWindowType={
-				name="tb_influence_group"
+				name="tb_influence_group_replacement"
 				size={width=70 height=36}
 				position={x=1050 y=0}
 
