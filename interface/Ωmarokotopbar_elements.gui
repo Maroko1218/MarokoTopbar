@@ -1,0 +1,979 @@
+guiTypes = {
+    ### TOPBAR FOR MUSICPLAYER
+	containerWindowType={
+		name="maingui_lower_topbar"
+		position={x=-48 y=34}
+		size={width=145 height=36}
+		orientation=upper_right
+		hide_position={x=-48 y=34}
+		show_position={x=-145 y=34}
+		show_animation_type=decelerated
+		hide_animation_type=accelerated
+		animation_time=200
+
+		background={
+			name ="background"
+			quadTextureSprite="GFX_topbar_background_cutoff"
+			position={x= 0 y=0}
+		}
+
+		buttonType={
+			name="music_controls_toggle"
+			quadTextureSprite="GFX_music_commands_icon"
+			position={x=22 y=0}
+			pdx_tooltip="MUSIC_CONTROLS_TOGGLE_VISIBLE"
+			clicksound=interface
+			oversound=no_sound
+		}
+
+		####################
+		# Music
+		####################
+		containerWindowType={
+			name="music_commands_win"
+			size={width=90 height=32}
+			orientation=upper_right
+			position={x=-90 y=0}
+			clipping=no
+
+			containerWindowType={
+				name="topbar_bar_04"
+				size={width=102 height=25}
+				position={x=-5 y=6}
+
+					background={
+						name="green_vertical_delimiters"
+						spriteType="GFX_green_vertical_delimiters"
+					}
+			}
+
+			buttonType={
+				name="music_pause_button"
+				quadTextureSprite ="GFX_music_pause_button"
+				position={x= 0 y=0}
+				clicksound=confirmation
+				oversound=no_sound
+			}
+
+			buttonType={
+				name="music_next_button"
+				quadTextureSprite ="GFX_music_next_button"
+				position={x= 28 y=0}
+				pdx_tooltip="MUSICPLAYER_NEXT"
+				oversound=no_sound
+				clicksound=increment_click
+			}
+
+			buttonType={
+				name="musicplayer_button"
+				quadTextureSprite ="GFX_musicplayer_button"
+				position={x= 56 y=0}
+				pdx_tooltip="MUSICPLAYER_OPEN_PLAYER"
+				clicksound=interface
+				oversound=no_sound
+			}
+		}
+	}
+
+	containerWindowType={
+		name="maingui"
+		position={x=0 y=0}
+		size={width=100% height=100%}
+
+		### Gamepad cursor
+
+		buttonType={
+			name="crosshair_cursor"
+			spriteType="GFX_crosshair_cursor"
+			position={x=-27.5 y=-27.5}
+			orientation="CENTER"
+			scale=1
+		}
+
+		buttonType={
+			name="crosshair_cursor_overlay"
+			spriteType="GFX_crosshair_cursor_overlay"
+			position={x=-27.5 y=-27.5}
+			orientation="CENTER"
+			scale=1
+		}
+
+		### TOPBAR
+
+		containerWindowType={
+			name="topbar"
+			position={x=0 y=0}
+			size={width=100% height=36}
+
+			background={
+				name ="background"
+				quadTextureSprite="GFX_topbar_background"
+				position={x= 0 y=0}
+			}
+		}
+
+		buttonType={
+			name ="topbar_04"
+			quadTextureSprite="GFX_topbar_bar_04"
+			position={x= -170 y=11}
+			orientation=upper_right
+			oversound=no_sound
+		}
+
+		####################
+		# Resources and Stuff
+		####################
+
+		containerWindowType={
+			name="topbar_static"
+			position={x=65 y=0}
+			containerWindowType={
+				name="tb_energy_group"
+				size={width=70 height=36}
+				position={x=0 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_energy"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_mineral_group"
+				size={width=70 height=36}
+				position={x=70 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_minerals"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_food_group"
+				size={width=70 height=35}
+				position={x=140 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_food"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="basic_resources_divider"
+				position={x=210 y=2}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+				}
+			}
+
+			containerWindowType={
+				name="tb_consumer_goods_group"
+				size={width=70 height=36}
+				position={x=210 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_consumer_goods"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_biomass_group"
+				size={width=70 height=36}
+				position={x=210 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_biomass"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_alloys_group"
+				size={width=70 height=36}
+				position={x=280 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_alloys"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_trade_group"
+				size={width=70 height=36}
+				position={x=350 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_trade"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="rare_resources_divider"
+				position={x=420 y=2}
+				size={width=8 height=75%}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+
+				}
+			}
+
+			containerWindowType={
+				name="tb_motes_group"
+				size={width=70 height=36}
+				position={x=420 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_motes_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_gases_group"
+				size={width=70 height=36}
+				position={x=490 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_gases_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_crystals_group"
+				size={width=70 height=36}
+				position={x=560 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_crystals_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="very_rare_resources_divider"
+				position={x=630 y=2}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+				}
+			}
+
+			containerWindowType={
+				name="tb_living_metal_group"
+				size={width=70 height=36}
+				position={x=630 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_living_metal_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_zro_group"
+				size={width=70 height=36}
+				position={x=700 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_zro_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_dark_matter_group"
+				size={width=70 height=36}
+				position={x=770 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_dark_matter_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_nanites_group"
+				size={width=70 height=36}
+				position={x=840 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_nanites_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_minor_artifacts_group"
+				size={width=70 height=36}
+				position={x=910 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_minor_artifacts_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_astral_threads_group"
+				size={width=70 height=36}
+				position={x=980 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_astral_threads_group"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="societal_resources_divider"
+				position={x=1050 y=2}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+				}
+			}
+
+			containerWindowType={
+				name="tb_influence_group_replacement"
+				size={width=70 height=36}
+				position={x=1050 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_influence"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_unity_group"
+				size={width=70 height=36}
+				position={x=1120 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_unity"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="intangible_resources_divider"
+				position={x=1190 y=2}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+				}
+			}
+
+			containerWindowType={
+				name="tb_physics_research_group"
+				size={width=70 height=36}
+				position={x=1190 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_physics"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_society_research_group"
+				size={width=70 height=36}
+				position={x=1260 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_society"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="tb_engineering_research_group"
+				size={width=70 height=36}
+				position={x=1330 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_resource_engineering"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="military_resources_divider"
+				position={x=1400 y=2}
+
+				background={
+					name="green_vertical_delimiters"
+					spriteType="GFX_vertical_divider"
+				}
+			}
+
+			containerWindowType={
+				name="empire_size_group"
+				size={width=70 height=36}
+				position={x=1400 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_empire_sprawl_icon"
+					position={x=26 y=2}
+					scale=0.8
+					tooltip_mode_enabled=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+			containerWindowType={
+				name="leaders_group"
+				size={width=70 height=36}
+				position={x=1470 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_envoy_icon"
+					position={x=26 y=2}
+					scale=0.65
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="starbase_group"
+				size={width=70 height=36}
+				position={x=1540 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_station_icon"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+
+			containerWindowType={
+				name="navy_group"
+				size={width=70 height=36}
+				position={x=1610 y=0}
+
+				background={
+					name="background"
+					spriteType="GFX_invisible"
+				}
+
+				iconType={
+					name="icon"
+					spriteType="GFX_fleet_size_icon"
+					position={x=26 y=2}
+					tooltip_mode_enabled=yes
+					alwaysTransparent=yes
+				}
+
+				instantTextBoxType={
+					name="amount"
+					font="cg_16b"
+					position={x=0 y=18}
+					maxWidth=70
+					maxHeight=16
+					format=center
+				}
+			}
+		}
+
+		####################
+		# Time stuff
+		####################
+		containerWindowType={
+			name="time_window"
+			position={x= -150 y=0}
+			size={width=200 height=200}
+			orientation=upper_right
+
+			buttonType ={
+				name ="pause_bg"
+				spriteType="GFX_topbar_running"
+				position={x= -76 y=0}
+			}
+
+			buttonType ={
+				name ="pause_bg_stop"
+				spriteType="GFX_topbar_paused"
+				position={x= -76 y=0}
+				oversound=no_sound
+			}
+
+			iconType ={
+				name ="pause_glow"
+				spriteType="GFX_topbar_pause_glow"
+				position={x= -76 y=-23}
+			}
+
+			containerWindowType={
+				name="hitbox"
+				position={x=-20 y=0}
+				size={width=120 height=35}
+
+				background={
+					name="hitbox"
+					spriteType="GFX_invisible"
+					clicksound=ui_click_pause
+				}
+			}
+
+			buttonType={
+				name="decrease_speed"
+				quadTextureSprite="GFX_topbar_date_minus"
+				position={x= 125 y=7}
+				clicksound=ui_speed_down_time_click
+				oversound=no_sound
+			}
+
+			buttonType={
+				name="increase_speed"
+				quadTextureSprite="GFX_topbar_date_plus"
+				position={x= 100 y=7}
+				clicksound=ui_speed_up_time_click
+				oversound=no_sound
+			}
+
+			instantTextBoxType={
+				name="time"
+				font="cg_16b"
+				position={x= 12 y= 4}
+				maxWidth=100
+				maxHeight=16
+				text="0000.00.00"
+			}
+
+			buttonType={
+				name="start_stop_icons"
+				quadTextureSprite="GFX_start_stop_icons"
+				position={x=-50 y=6}
+				frame=1
+				clicksound=ui_click_pause
+				oversound=no_sound
+			}
+
+			instantTextBoxType={
+				name="time_description"
+				position={x=-30  y=18}
+				font="cg_16b"
+				text="GAME_SPEED_3"
+				maxWidth=150
+				maxHeight=16
+				text_color_code="E"
+				format=centre
+			}
+		}
+
+	}
+}
